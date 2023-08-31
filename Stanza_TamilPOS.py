@@ -40,16 +40,19 @@ class StanzaNLPApp(QtWidgets.QMainWindow):
         process_action = QtWidgets.QAction("குறியிடப்பட வேண்டிய கோப்பு", self)
         process_action.triggered.connect(self.process_file)
         file_menu.addAction(process_action)
-
+    
         exit_action = QtWidgets.QAction("வெளியேறு", self)
         exit_action.triggered.connect(self.close)
         file_menu.addAction(exit_action)
-
+        
         help_menu = menubar.addMenu("உதவி")
         about_action = QtWidgets.QAction("பற்றி", self)
         about_action.triggered.connect(self.show_about_dialog)
         help_menu.addAction(about_action)
+        
+        
 
+        
 
     def process_and_save(self, input_text, output_file):
         config = {
@@ -82,7 +85,7 @@ class StanzaNLPApp(QtWidgets.QMainWindow):
         msg_box = QtWidgets.QMessageBox(self)
         msg_box.setWindowTitle("Process Completed")
         msg_box.setIcon(QtWidgets.QMessageBox.Information)
-        msg_box.setText("The process has been completed.")
+        msg_box.setText("குறியிடுதல் செயல்பாடு முடிந்தது.")
         msg_box.exec_()
 
     def show_output_results(self, doc):
