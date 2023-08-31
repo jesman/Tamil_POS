@@ -35,7 +35,7 @@ Get Started
 
 Author
 
-Jasmine Pillai  
+Jasman Anthony Pillai  
 (C) 2023
 
 
